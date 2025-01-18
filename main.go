@@ -131,7 +131,7 @@ func main() {
 		log.ERROR.Print("Retrieving token")
 		err = client.DoJSON(tokenRequest, &token)
 		if err != nil {
-			log.ERROR.Print("Error retrieving RTE token: #%v", err)
+			log.ERROR.Print("Error retrieving RTE token: %s", err)
 		}
 		log.ERROR.Print("Retrieved token")
 
