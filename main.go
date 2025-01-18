@@ -128,12 +128,12 @@ func main() {
 		})
 		var token oauth2.Token
 		client := request.NewHelper(log)
-		log.ERROR.Print("Retrieving token")
+		log.DEBUG.Print("Retrieving token")
 		err = client.DoJSON(tokenRequest, &token)
 		if err != nil {
-			log.ERROR.Print("Error retrieving RTE token: %s", err)
+			log.ERROR.Print("Error retrieving RTE token", err)
 		}
-		log.ERROR.Print("Retrieved token")
+		log.DEBUG.Print("Retrieved token")
 
 		var res struct {
 			Data struct {
