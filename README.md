@@ -7,8 +7,24 @@ tariffs.
 
 simplest way is to use the container and start it.
 
+in docker:
+
+```shell
+docker run --name evcc-tempo -d -v /Where/is/your/config/evcc-tempo.yaml:/etc/evcc-tempo/evcc-tempo.yaml -p 8080:8080 ghcr.io/sdesbure/evcc-tempo:main
+```
+
 you can retrieve the prices in `/prices` endpoint.
 
+in evcc, add this:
+
+```yaml
+tariffs:
+  grid:
+    type: custom
+    forecast:
+      source: http
+      uri: http://docker-server-ip:8080
+```
 
 ## Configuration
 
