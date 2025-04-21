@@ -37,8 +37,7 @@ type config struct {
 }
 
 func backoffPermanentError(err error) error {
-	var se request.StatusError
-	if errors.As(err, &se) {
+	if se := new(request.StatusError); errors.As(err, &se) {
 		if code := se.StatusCode(); code >= 400 && code <= 599 {
 			return backoff.Permanent(se)
 		}
@@ -175,13 +174,13 @@ func main() {
 				arPeak := api.Rate{
 					Start: r.StartDate.Local().Add(time.Hour * 6).UTC(),
 					End:   r.StartDate.Local().Add(time.Hour * 22).UTC(),
-					Price: peakPrice,
+					Value: peakPrice,
 				}
 				data = append(data, arPeak)
 				arOffPeak := api.Rate{
 					Start: r.StartDate.Local().Add(time.Hour * 22).UTC(),
 					End:   r.StartDate.Local().Add(time.Hour * 30).UTC(),
-					Price: offPeakPrice,
+					Value: offPeakPrice,
 				}
 				data = append(data, arOffPeak)
 			}
