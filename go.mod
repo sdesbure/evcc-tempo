@@ -10,7 +10,7 @@ require (
 	github.com/fatih/structs v1.1.0
 	github.com/gin-gonic/gin v1.10.1
 	github.com/jinzhu/now v1.1.5
-	golang.org/x/oauth2 v0.30.0
+	golang.org/x/oauth2 v0.31.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
