@@ -1,8 +1,8 @@
 module github.com/sdesbure/evcc-tempo
 
-go 1.24.0
+go 1.25
 
-toolchain go1.24.2
+toolchain go1.25.1
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0
