@@ -1,5 +1,5 @@
 # Build the manager binary
-FROM golang:1.25.3-bookworm@sha256:51b6b12427dc03451c24f7fc996c43a20e8a8e56f0849dd0db6ff6e9225cc892 AS builder
+FROM golang:1.25.3-bookworm@sha256:81bcbea62b81aa3c4a8b7e4895b2527de0829e32b9884c9c5f96f2083a73fd35 AS builder
 
 WORKDIR /workspace
 # Copy the Go Modules manifests
