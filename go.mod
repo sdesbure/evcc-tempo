@@ -1,8 +1,6 @@
 module github.com/sdesbure/evcc-tempo
 
-go 1.25.0
-
-toolchain go1.25.1
+go 1.26.0
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0
@@ -10,7 +8,7 @@ require (
 	github.com/fatih/structs v1.1.0
 	github.com/gin-gonic/gin v1.12.0
 	github.com/jinzhu/now v1.1.5
-	golang.org/x/oauth2 v0.36.0
+	golang.org/x/oauth2 v0.37.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
